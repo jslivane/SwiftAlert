@@ -20,7 +20,9 @@ class SwiftAlert: NSObject, UIAlertViewDelegate {
 		
 		//Add buttons from otherButtonTitle
 		for (index, title) in enumerate(otherButtonTitle) {
-			alert.addButtonWithTitle(title!)
+			if title != nil {
+				alert.addButtonWithTitle(title!)
+			}
 		}
 
 		self.unmanaged = Unmanaged.passRetained(self)
