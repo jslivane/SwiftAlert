@@ -11,7 +11,7 @@ import UIKit
 class SwiftAlert: NSObject, UIAlertViewDelegate {
 	
 	private var callBack : ((Int) -> (Void))
-	private let unmanaged : Unmanaged<NSObject>?
+	private var unmanaged : Unmanaged<NSObject>?
 	
 	 init(showWithActionClosure closure:(buttonIndex:Int) -> Void, title: String?, message: String?, cancelButtonTitle: String?, otherButtonTitle:String?...) {
 		self.callBack = closure
